@@ -1,9 +1,10 @@
 import React from "react";
-import Welcome from "../ui/Welcome";
+
+import TextDesign from "../ui/TextDesign";
 function Home() {
 	return (
 		<div>
-			<Welcome />
+			<TextDesign text={"Gokulkumar NT"} width={600} height={200} />
 		</div>
 	);
 }
