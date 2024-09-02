@@ -5,10 +5,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 16px;
 }
 
 .text-animation {
-	font-size: 6vw;
+	font-size: 12vw;
 	stroke-dasharray: 1000;
 	stroke-width: 1px;
 	stroke: #fff;

@@ -10,7 +10,7 @@ function App() {
 				<title>YYY</title>
 			</head>
 			<body className="bg-black min-h-screen">
-				<header className=" bg-blue-900 text-white font-bold p-4 text-xl flex justify-between">
+				<header className=" sticky top-0 bg-blue-900 text-white font-bold p-4 text-xl flex justify-between">
 					<h1>G</h1>
 					<div>
 						<h2>Links</h2>
