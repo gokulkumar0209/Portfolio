@@ -1,42 +1,39 @@
 .text-design-container {
-	padding: 20px;
-	background-color: #2d3748; /* Slightly darker slate color for contrast */
-  }
-  
-  .wrapper {
-	overflow: hidden;
-  }
-  
-  .text-animation {
-	fill: #faf8ff;
-	font-size: 100px;
-	font-family: 'Arial', sans-serif;
-	stroke-dasharray: 1360;
-	stroke-width: 2px;
+	background-color: transparent; /* Slightly darker slate color for contrast */
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-animation {
+	font-size: 6vw;
+	stroke-dasharray: 1000;
+	stroke-width: 1px;
 	stroke: #fff;
-	animation: csvg 3s cubic-bezier(0, 0.23, 1, 0.1) forwards;
-  }
-  
-  @keyframes csvg {
+	animation: csvg 6s cubic-bezier(0, 0.23, 1, 0.2) forwards;
+}
+
+@keyframes csvg {
 	0% {
-	  opacity: 0;
-	  stroke-dasharray: 0;
-	  fill: none;
+		opacity: 0;
+		stroke-dasharray: 0;
+		fill: none;
 	}
-  
+
 	30% {
-	  opacity: 1;
-	  fill: none;
+		opacity: 1;
+		fill: none;
 	}
-  
+
 	80% {
-	  fill: rgba(255, 255, 255, 0);
+		fill: rgba(255, 255, 255, 0);
 	}
-  
+
 	100% {
-	  opacity: 1;
-	  fill: #ffe7ff;
-	  stroke: none;
+		opacity: 1;
+		fill: #ffe7ff;
+		stroke: none;
 	}
-  }
-  
+}
