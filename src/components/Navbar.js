@@ -3,15 +3,15 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
-	const loverCasePage = page.toLowerCase();
+	const lowerCasePage = page.toLowerCase();
 	return (
 		<AnchorLink
 			className={`${
-				selectedPage === loverCasePage ? "text-yellow" : ""
+				selectedPage === lowerCasePage ? "text-yellow" : ""
 			} hover:text-yellow transition duration-300
     `}
-			href={`#${loverCasePage}`}
-			onClick={() => setSelectedPage(loverCasePage)}
+			href={`#${lowerCasePage}`}
+			onClick={() => setSelectedPage(lowerCasePage)}
 		>
 			{page}
 		</AnchorLink>
@@ -20,12 +20,13 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 
 function Navbar({ selectedPage, setSelectedPage, isTopOfPage }) {
 	const [isMenuToggled, setIsMenuToggled] = useState(false);
-	const navBackground = isTopOfPage ? "" : "bg-black";
+	// const navBackground = isTopOfPage ? "" : "bg-black";
+	// need to update
 
 	const isAboveMediumScreens = useMediaQuery("(min-width:768px");
 
 	return (
-		<nav className={`${navBackground}z-40 w-full fixed top-0 bg-black py-6`}>
+		<nav className={`z-40 w-full fixed top-0 bg-black py-6`}>
 			<div className="flex items-center justify-between mx-auto w-5/6">
 				<h4 className="font-playfair text-3xl font-bold h-7">Gokulkumar</h4>
 				{/* {DESKTOP NAV} */}
@@ -58,13 +59,7 @@ function Navbar({ selectedPage, setSelectedPage, isTopOfPage }) {
 						className=" rounded-full bg-red p-2 "
 						onClick={() => setIsMenuToggled(!isMenuToggled)}
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							className="h-7"
-						>
-							<path d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z" />
-						</svg>
+						&#9776;
 					</button>
 				)}
 
@@ -79,17 +74,12 @@ function Navbar({ selectedPage, setSelectedPage, isTopOfPage }) {
 								onClick={() => setIsMenuToggled(!isMenuToggled)}
 								className="flex justify-end mb-7"
 							>
-								<svg
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
+								<svg width="24" height="24" viewBox="0 0 24 24">
 									<path
-										d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
-										fill="white"
-										fill-opacity="0.54"
+										d="M19 6L6 19M6 6l13 13"
+										stroke="currentColor"
+										stroke-width="2"
+										fill="none"
 									/>
 								</svg>
 							</button>
