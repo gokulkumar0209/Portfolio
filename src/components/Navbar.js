@@ -8,7 +8,7 @@ function Navbar() {
 
 	const NavLink = ({ title }) => (
 		<LinkScroll
-			className="text-white capitalize"
+			className="text-white capitalize cursor-pointer hover:text-teal-600"
 			to={title}
 			spy
 			smooth
@@ -50,19 +50,7 @@ function Navbar() {
 								onClick={() => setIsMenuToggled(false)}
 								className="flex justify-end mb-7"
 							>
-								<svg
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"
-										fill="white"
-										fillOpacity="0.54"
-									/>
-								</svg>
+								<span className=" font-bold text-yellow text-2xl">x</span>
 							</button>
 
 							{/* MENU ITEMS */}
@@ -81,3 +69,21 @@ function Navbar() {
 }
 
 export default Navbar;
+
+// SVG for X , can be added at last
+
+{
+	/* <svg
+	width="24"
+	height="24"
+	viewBox="0 0 24 24"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<path
+		d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"
+		fill="white"
+		fillOpacity="0.54"
+	/>
+</svg>; */
+}
