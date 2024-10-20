@@ -41,7 +41,7 @@ const ProjectGif = ({ title }) => {
 function Projects() {
 	console.log(projects);
 	return (
-		<section id="projects" className="pt-48 pb-48 ">
+		<section id="projects" name="projects" className="pt-48 pb-48 ">
 			<motion.div
 				className="md:w-2/4 mx-auto text-center"
 				initial="hidden"

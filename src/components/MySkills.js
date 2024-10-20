@@ -7,7 +7,7 @@ function MySkills() {
 	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
 	return (
-		<section id="skills" className="pt-10 pb-24">
+		<section id="skills" name="skills" className="pt-10 pb-24">
 			{/* {   HEADER AND IMAGE SECTION } */}
 			<div className="md:flex md:justify-between md:gap-16 mt-32">
 				<motion.div

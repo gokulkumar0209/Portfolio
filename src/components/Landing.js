@@ -1,16 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link as LinkScroll } from "react-scroll";
 import Typewriter from "typewriter-effect";
 import SocialMediaIcons from "./SocialMediaIcons";
 
-function Landing({ setSelectedPage }) {
+function Landing() {
 	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
 	return (
 		<section
 			id="home"
+			name="home"
 			className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
 		>
 			{/* {IMAGE SECTION} */}
@@ -103,22 +104,26 @@ function Landing({ setSelectedPage }) {
 						visible: { opacity: 1, x: 0 },
 					}}
 				>
-					<AnchorLink
+					<LinkScroll
 						className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
-						onClick={() => setSelectedPage("contact")}
-						href="#contact"
+						to="contact"
+						spy
+						smooth
+						duration={1000}
+						activeClass="text-yellow-400"
 					>
 						Contact Me
-					</AnchorLink>
-					<AnchorLink
-						className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-						onClick={() => setSelectedPage("contact")}
-						href="#contact"
+					</LinkScroll>
+					<LinkScroll
+						className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+						to="contact"
+						spy
+						smooth
+						duration={1000}
+						activeClass="text-yellow-400"
 					>
-						<div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
-							Let's talk
-						</div>
-					</AnchorLink>
+						Let's Talk
+					</LinkScroll>
 				</motion.div>
 
 				<motion.div
