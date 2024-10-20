@@ -18,7 +18,7 @@ function Contact() {
 	};
 
 	return (
-		<section id="contact" className="py-48">
+		<section id="contact" title="contact" className="py-48">
 			<motion.div
 				className="flex justify-end w-full"
 				initial="hidden"
