@@ -1,5 +1,6 @@
 import Contact from "./components/Contact";
 import DotGroup from "./components/DotGroup";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import LineGradient from "./components/LineGradient";
@@ -14,6 +15,7 @@ function App() {
 			<Landing />
 			<LineGradient />
 			<MySkills />
+			<Experience />
 			<Projects />
 			<LineGradient />
 			<Contact />

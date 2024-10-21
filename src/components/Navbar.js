@@ -29,6 +29,8 @@ function Navbar() {
 					<div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
 						<NavLink title="home" />
 						<NavLink title="skills" />
+
+						<NavLink title="my journey" />
 						<NavLink title="projects" />
 						<NavLink title="contact" />
 					</div>
@@ -57,6 +59,8 @@ function Navbar() {
 							<div className="flex flex-col gap-10 ml-[33%] text-2xl text-gray-400">
 								<NavLink title="home" />
 								<NavLink title="skills" />
+
+								<NavLink title="my journey" />
 								<NavLink title="projects" />
 								<NavLink title="contact" />
 							</div>
