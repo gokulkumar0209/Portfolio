@@ -17,7 +17,7 @@ function SocialMediaIcons() {
 				target="_blank"
 				rel="noreferrer"
 			>
-				<img alt="linked-link" src="assets/email.jpg" width={40} />
+				<img alt="linked-link" src="assets/email.jpg" width={40} height={40} />
 			</a>
 			<a
 				className="hover:opacity-50 transition duration-500"

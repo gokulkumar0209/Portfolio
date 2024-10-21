@@ -21,7 +21,7 @@ function Navbar() {
 
 	return (
 		<nav className="z-40 w-full fixed top-0 bg-black py-6">
-			<div className="flex items-center justify-between mx-auto w-5/6">
+			<div className="flex items-center justify-between lg:mx-20 w-5/6">
 				<h4 className="font-playfair text-3xl font-bold">Gokulkumar</h4>
 
 				{/* DESKTOP NAV */}

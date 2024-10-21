@@ -1,41 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
-import useMediaQuery from "../hooks/useMediaQuery";
 import { Link as LinkScroll } from "react-scroll";
-import Typewriter from "typewriter-effect";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 function Landing() {
-	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-
 	return (
 		<section
 			id="home"
 			name="home"
-			className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
+			className="lg:mx-20 md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
 		>
 			{/* {IMAGE SECTION} */}
-			<div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
-				{isAboveMediumScreens ? (
-					<div className="relative z-0 ml-15 before:absolute before:-top-14 before:-left-14 before:rounded-t-[400px] before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
-						<img
-							alt="profile"
-							src="../../assets/my-photo.png"
-							className="hover:filter hover:saturate-200 transition h-[600px] duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-t-[400px]"
-						/>
-					</div>
-				) : (
+			<div className="max-lg:hidden  flex justify-center order-2 mr-20 z-10 mt-16">
+				<div className="relative z-0 ml-15 before:absolute">
 					<img
 						alt="profile"
-						src="./../../assets/my-photo.jpg"
-						className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-t-[400px]"
+						src="../../assets/my-photo.png"
+						className="hover:filter hover:saturate-200 transition h-[600px] duration-500 rounded-lg"
 					/>
-				)}
+				</div>
 			</div>
 
 			{/* {MAIN SECTION} */}
 
-			<div className="z-30 basis-2/5  mt-12 md:mt-32">
+			<div className="z-30 basis-2/5 max-md:justify-center  mt-12 md:mt-32">
 				<motion.div
 					initial="hidden"
 					whileInView={"visible"}
@@ -49,35 +37,6 @@ function Landing() {
 					<p className="text-6xl font-playfair z-10 text-center md:text-start">
 						Gokulkumar
 						<span className="text-yellow text-5xl">
-							{/* <Typewriter
-								onInit={(typewriter) => {
-									typewriter
-
-										.typeString("MERN Stack")
-										.pauseFor(500)
-										.deleteAll()
-										.typeString("Web Developer")
-										.deleteAll()
-										.pauseFor(500)
-										.typeString("React")
-										.deleteAll()
-										.pauseFor(500)
-										.typeString("Express")
-										.deleteAll()
-										.pauseFor(500)
-										.typeString("MySQL")
-										.deleteAll()
-										.pauseFor(500)
-										.typeString("Sequelize")
-										.deleteAll()
-										.pauseFor(500)
-										.typeString("Bootstrap")
-										.deleteAll()
-										.pauseFor(500)
-										.typeString("MERN Stack Developer")
-										.start();
-								}}
-							/> */}
 							<br />
 							Frontend Engineer
 						</span>
@@ -105,24 +64,28 @@ function Landing() {
 					}}
 				>
 					<LinkScroll
-						className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+						className="mr-4"
 						to="contact"
 						spy
 						smooth
 						duration={1000}
 						activeClass="text-yellow-400"
 					>
-						Contact Me
+						<button className="button-gradient hover:text-white">
+							Contact Me
+						</button>
 					</LinkScroll>
 					<LinkScroll
-						className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+						className="ml-4"
 						to="contact"
 						spy
 						smooth
 						duration={1000}
-						activeClass="text-yellow-400"
+						activeClass=""
 					>
-						Let's Talk
+						<button className="button-gradient hover:text-white">
+							Lets Talk
+						</button>
 					</LinkScroll>
 				</motion.div>
 
