@@ -14,6 +14,7 @@ function Navbar() {
 			smooth
 			duration={1000}
 			activeClass="text-yellow"
+			offset={-100}
 		>
 			{title}
 		</LinkScroll>
